@@ -13,7 +13,7 @@ const useDataProducts = () => {
     const [errorProduct, setError] = useState(null);
     const [success, setSuccess] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [Products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     const cleanData = () => {
         setName("");
@@ -130,4 +130,77 @@ const useDataProducts = () => {
             setSuccess(null);
             setActiveTab("form");
         }
-    }
+
+        const handleUpdate = async (e) => {
+            e.preventDefault();
+
+            try {
+                const updateProduct = {
+                    name,
+                    description,
+                    price,
+                    stock
+                };
+
+            const response  = await fetch(
+            `${ApiProducts}/${id}`,
+
+            {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(updateProduct),
+            }
+            )
+
+            if (!response.ok) {
+                throw new Error("Error al actualizar el producto");
+            }
+
+            toast.success('Producto actualizado');
+            setSuccess("Producto actualizado correctamente");
+            cleanData();
+            setId("");
+            setActiveTab("list");
+            fetchData();
+            } catch (error) {
+                setError(error.message);
+                alert("Error al actualizar el producto");
+                console.error("Error:", errorProduct);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        return {
+            activeTab,
+            setActiveTab,
+            id,
+            setId,
+            name,
+            setName,
+            description,
+            setDescription,
+            price,
+            setPrice,
+            stock,
+            setStock,
+            errorProduct,
+            setError,
+            success,
+            setSuccess,
+            loading,
+            setLoading,
+            products,
+            setProducts,
+            cleanData,
+            handleSubmit,
+            fetchData,
+            deleteProduct,
+            updateProduct,
+            handleUpdate
+        };
+    };
+
+export default useDataProducts;
