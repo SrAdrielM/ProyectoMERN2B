@@ -21,7 +21,7 @@ app.use(express.json());
 //Que acepte cookies en postman
 app.use(cookieParser());
 // Definir las rutas de las funciones que tendrá la página web
-app.use("/api/products", validateAuthToken(["employee", "admin"]), productsRoutes);
+app.use("/api/products", productsRoutes);
 app.use("/api/customers", customersRoutes);
 app.use("/api/employee", employeeRoutes);
 app.use("/api/branches", branchesRoutes);
