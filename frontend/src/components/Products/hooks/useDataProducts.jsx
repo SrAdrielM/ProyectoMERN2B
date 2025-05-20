@@ -60,7 +60,7 @@ const useDataProducts = () => {
             }
 
             const data = await response.json();
-            toast.sucess("Producto registrado");
+            toast.success("Producto registrado");
             setProducts(data);
             setSuccess("Producto registrado correctamente");
             cleanData();
@@ -113,7 +113,7 @@ const useDataProducts = () => {
             console.log("Deleted:", result);
             toast.success('Producto eliminado');
             // Actualizar la lista después de borrar
-            setEmployees((prev) => prev.filter(emp => emp._id !== id));
+            setProducts((prev) => prev.filter(emp => emp._id !== id));
             fetchData();
         } catch (error) {
               console.error("Error deleting product sfs:", error);

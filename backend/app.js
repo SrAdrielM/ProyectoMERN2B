@@ -1,5 +1,6 @@
 // Importo todo lo de la libreria de Express
 import express from "express";
+import cors from "cors";
 import productsRoutes from "./src/routes/products.js";
 import customersRoutes from "./src/routes/customers.js";
 import employeeRoutes from "./src/routes/employees.js";
@@ -16,6 +17,13 @@ import { validateAuthToken } from "./src/middlewares/validateAuthToken.js";
 
 // Creo una constante que es igual a la libreria que importé
 const app = express();
+
+app.use(
+    cors({
+      origin: "*", // Dominio del cliente
+      credentials: true, // Permitir envío de cookies y credenciales
+    })
+  );
 //Que acepte datos en json
 app.use(express.json());
 //Que acepte cookies en postman

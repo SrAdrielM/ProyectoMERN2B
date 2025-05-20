@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-//import ListProducts from "../components/Employees/ListEmployees";
-import {Toaster} from 'react-hot-toast';
+import RegisterProducts from "../components/Products/registerProduct"
+import ListProducts from "../components/Products/ListProducts";
 
 import useDataProducts from "../components/Products/hooks/useDataProducts";
 
@@ -39,6 +39,8 @@ const Products = () => {
         updateProduct,
         handleUpdate
     } = useDataProducts();
+
+    console.log(products, 'desde pantalla')
 
     return (
         <div className="min-h-screen bg-gray-100 p-6">
@@ -106,11 +108,6 @@ const Products = () => {
               </div>
             </div>
           </div>
-          <Toaster
-            toastOptions={{
-              duration: 1000,
-            }}
-          />
         </div>
       );
 }
