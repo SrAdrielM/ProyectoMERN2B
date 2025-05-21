@@ -4,7 +4,7 @@ import './App.css';
 
 import Nav from "./components/NavBar"
 import Products from './pages/Products'
-import Branches from './pages/Branches'
+import Customers from './pages/Customers'
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Products />} />
-        <Route path="/Branches" element={<Branches/>}/>
+        <Route path="/Customers" element={<Customers/>}/>
       </Routes>
     </Router>
     </>

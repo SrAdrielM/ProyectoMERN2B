@@ -19,8 +19,8 @@ const ListProduct = ({
           <CardProduct
             key={product._id}
             product={product}
-            deleteEmployee={deleteProduct}
-            updateEmployee={updateProduct}
+            deleteProduct={deleteProduct}
+            updateProduct={updateProduct}
           />
         ))}
       </div>

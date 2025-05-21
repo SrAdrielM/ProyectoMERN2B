@@ -13,8 +13,8 @@ const Nav = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="/Branches">
-                            Branches
+                        <a href="/Customers">
+                            Clientes
                         </a>
                     </li>
                 </ul>
