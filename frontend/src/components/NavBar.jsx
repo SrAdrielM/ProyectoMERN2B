@@ -17,6 +17,11 @@ const Nav = () => {
                             Clientes
                         </a>
                     </li>
+                    <li>
+                        <a href="/Employees">
+                            Empleados
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
