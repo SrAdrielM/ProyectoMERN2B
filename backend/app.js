@@ -20,7 +20,10 @@ const app = express();
 
 app.use(
     cors({
-      origin: "https://proyectomern2b-wu9z.onrender.com",
+      origin: [
+            "https://proyecto-mern-2-b-eosin.vercel.app", // Frontend en Vercel
+            "https://proyectomern2b-wu9z.onrender.com",   // Backend en OnRender
+        ],
       credentials: true, 
     })
   );
