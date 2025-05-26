@@ -20,8 +20,8 @@ const app = express();
 
 app.use(
     cors({
-      origin: "*", // Dominio del cliente
-      credentials: true, // Permitir envío de cookies y credenciales
+      origin: "https://proyectomern2b-wu9z.onrender.com/",
+      credentials: true, 
     })
   );
 //Que acepte datos en json
