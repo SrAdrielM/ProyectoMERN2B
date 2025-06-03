@@ -5,6 +5,7 @@ import productsRoutes from "./src/routes/products.js";
 import customersRoutes from "./src/routes/customers.js";
 import employeeRoutes from "./src/routes/employees.js";
 import branchesRoutes from "./src/routes/branches.js";
+import faqsRouter from "./src/routes/faqs.js";
 import reviewRoutes from "./src/routes/reviews.js";
 import registerEmployesRoutes from "./src/routes/registerEmployees.js";
 import cookieParser from "cookie-parser";
@@ -21,8 +22,8 @@ const app = express();
 app.use(
     cors({
       origin: [
-            "https://proyecto-mern-2-b-eosin.vercel.app", // Frontend en Vercel
-            "https://proyectomern2b-wu9z.onrender.com",   // Backend en OnRender
+            "https://proyecto-mern-2-b-eosin.vercel.app",
+            "https://proyectomern2b-wu9z.onrender.com", 
         ],
       credentials: true, 
     })
@@ -37,6 +38,7 @@ app.use("/api/customers", customersRoutes);
 app.use("/api/employee", employeeRoutes);
 app.use("/api/branches", branchesRoutes);
 app.use("/api/reviews", reviewRoutes);
+app.use("/api/faqs", faqsRouter);
 
 app.use("/api/registerEmployees", registerEmployesRoutes);
 app.use("/api/login", loginRoute);
@@ -46,6 +48,5 @@ app.use("/api/registerClients", registerClient);
 app.use("/api/passwordRecovery", passwordRecoveryRoutes);
 
 app.use("/api/blog", validateAuthToken(["employee"]), blogRoutes);
-
 // Exporto la constante para poder usar express en otros archivos
 export default app;
