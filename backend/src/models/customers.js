@@ -41,9 +41,20 @@ const customersSchema = new Schema(
       type: String,
       require: true,
     },
+
     isVerified: {
       type: Boolean,
     },
+
+    loginAttempts: {
+      type: Number,
+      default: 0
+    },
+
+    lockTime: {
+      type: Date,
+      default: null
+    }
   },
   {
     timestamps: true,
