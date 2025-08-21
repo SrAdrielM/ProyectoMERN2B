@@ -29,8 +29,8 @@ const Employees = () => {
     setDui,
     address,
     setAddress,
-    birthdate,
-    setBirthdate,
+    birthday,
+    setBirthday,
     hireDate,
     setHireDate,
     isssNumber,
@@ -106,8 +106,8 @@ const Employees = () => {
                   setDui={setDui}
                   address={address}
                   setAddress={setAddress}
-                  birthdate={birthdate}
-                  setBirthdate={setBirthdate}
+                  birthday={birthday}
+                  setBirthday={setBirthday}
                   hireDate={hireDate}
                   setHireDate={setHireDate}
                   isssNumber={isssNumber}

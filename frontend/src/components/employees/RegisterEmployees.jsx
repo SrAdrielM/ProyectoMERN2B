@@ -17,8 +17,8 @@ const RegisterEmployees = ({
   setDui,
   address,
   setAddress,
-  birthdate,
-  setBirthdate,
+  birthday,
+  setBirthday,
   hireDate,
   setHireDate,
   isssNumber,
@@ -153,25 +153,14 @@ const RegisterEmployees = ({
             >
               Fecha de Nacimiento
             </label>
-            {birthdate ? (
               <input
                 type="date"
                 id="birthdate"
-                value={birthdate}
-                onChange={(e) => setBirthdate(e.target.value)}
+                value={birthday}
+                onChange={(e) => setBirthday(e.target.value)}
                 name="birthdate"
                 className="w-full px-3 py-2 border rounded"
               />
-            ) : (
-              <input
-                type="date"
-                id="birthdate"
-                value={birthdate}
-                onChange={(e) => setBirthdate(e.target.value)}
-                name="birthdate"
-                className="w-full px-3 py-2 border rounded"
-              />
-            )}
           </div>
           <div className="mb-4">
             <label

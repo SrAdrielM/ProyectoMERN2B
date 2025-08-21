@@ -25,8 +25,8 @@ const CardEmployee = ({ employee, deleteEmployee, updateEmployee }) => {
           <span className="font-semibold">Address:</span> {employee.address}
         </p>
         <p className="text-gray-600">
-          <span className="font-semibold">Birthdate:</span>{" "}
-          {new Date(employee.birthdate).toLocaleDateString()}
+          <span className="font-semibold">Birthday:</span>{" "}
+          {new Date(employee.birthday).toLocaleDateString()}
         </p>
         <p className="text-gray-600">
           <span className="font-semibold">Hire Date:</span>{" "}

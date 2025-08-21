@@ -15,7 +15,7 @@ const useDataEmployees = () => {
       const [telephone, setTelephone] = useState("");
       const [dui, setDui] = useState("");
       const [address, setAddress] = useState("");
-      const [birthdate, setBirthdate] = useState("");
+      const [birthday, setBirthday] = useState("");
       const [hireDate, setHireDate] = useState("");
       const [isssNumber, setIsssNumber] = useState("");
       const [errorEmpleado, setError] = useState(null);
@@ -31,7 +31,7 @@ const useDataEmployees = () => {
         setTelephone("");
         setDui("");
         setAddress("");
-        setBirthdate("");
+        setBirthday("");
         setHireDate("");
         setIsssNumber("");
         setId("");
@@ -49,7 +49,7 @@ const useDataEmployees = () => {
           !telephone ||
           !dui ||
           !address ||
-          !birthdate ||
+          !birthday ||
           !hireDate ||
           !isssNumber
         ) {
@@ -67,7 +67,7 @@ const useDataEmployees = () => {
             telephone,
             dui,
             address,
-            birthdate,
+            birthday,
             hireDate,
             isssNumber,
           };
@@ -156,7 +156,7 @@ const useDataEmployees = () => {
         setTelephone(dataEmployee.telephone);
         setDui(dataEmployee.dui);
         setAddress(dataEmployee.address);
-        setBirthdate(dataEmployee.birthdate);
+        setBirthday(dataEmployee.birthday);
         setHireDate(dataEmployee.hireDate);
         setIsssNumber(dataEmployee.isssNumber);
         setError(null);
@@ -176,7 +176,7 @@ const useDataEmployees = () => {
             telephone,
             dui,
             address,
-            birthdate,
+            birthday,
             hireDate,
             isssNumber,
           };
@@ -232,8 +232,8 @@ return {
     setDui,
     address,
     setAddress,
-    birthdate,
-    setBirthdate,
+    birthday,
+    setBirthday,
     hireDate,
     setHireDate,
     isssNumber,
