@@ -1,9 +1,6 @@
 /*
     Campos:
-        nombre
-        descripcion
-        precio
-        stock
+        
 */
 
 import { Schema, model } from "mongoose";
@@ -14,17 +11,14 @@ const employeeSchema = new Schema(
       type: String,
       require: true,
     },
-
     lastName: {
       type: String,
       require: true,
     },
-
     birthday: {
       type: Date,
       require: true,
     },
-
     email: {
       type: String,
       require: true,
@@ -34,7 +28,6 @@ const employeeSchema = new Schema(
       type: String,
       require: true,
     },
-
     password: {
       type: String,
       require: true,
@@ -43,12 +36,10 @@ const employeeSchema = new Schema(
       type: String,
       require: true,
     },
-
     telephone: {
       type: String,
       require: true,
     },
-
     dui: {
       type: String,
       require: true,
@@ -56,7 +47,7 @@ const employeeSchema = new Schema(
     isVerified: {
       type: Boolean,
     },
-    issnumber: {
+    isssNumber: {
       type: String,
       require: true,
     },

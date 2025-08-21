@@ -161,7 +161,6 @@ const RegisterEmployees = ({
                 onChange={(e) => setBirthdate(e.target.value)}
                 name="birthdate"
                 className="w-full px-3 py-2 border rounded"
-                readOnly={true}
               />
             ) : (
               <input
