@@ -5,7 +5,7 @@
     total
 */
 
-import {model, schema} from "mongoose"
+import {Schema, model} from "mongoose"
 
 const salesSchema = new Schema({
     product: {
